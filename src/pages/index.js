@@ -2,7 +2,7 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { FaCartArrowDown } from 'react-icons/fa'
+import { FaCartArrowDown } from 'react-icons/fa' //Introducing react icons
 
 const IndexPage = () => (
   <Layout>

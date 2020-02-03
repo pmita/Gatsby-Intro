@@ -11,10 +11,10 @@ import BackgroundSection from "../components/Globals/BackgroundSection";
 
 //We are passing the graphql query data as a prop into our function in order for us to utilize its functionality as 
 //a function arguement
-const IndexPage = ({data}) => (
+const AboutPage = ({data}) => (
   <Layout>
     <SEO title="Home" />
-    <BackgroundSection img={data.img.childImageSharp.fluid} title="regular Joe's" styleClass="default-background" />
+    <BackgroundSection img={data.img.childImageSharp.fluid} title="About us" styleClass="about-background" />
     <Info />
     <div className="row">
       <div className="col text-center">
@@ -35,7 +35,7 @@ help us style this component with css*/
 //image fragment. Take note of the ... spread operator in order to override what we don't have
 export const query = graphql`
 {
-  img: file(relativePath: {eq: "default-background.jpeg"}) {
+  img: file(relativePath: {eq: "about-background.jpeg"}) {
     childImageSharp {
       fluid {
         ...GatsbyImageSharpFluid_tracedSVG
@@ -44,4 +44,4 @@ export const query = graphql`
   }
 }`;
 
-export default IndexPage;
+export default AboutPage;
